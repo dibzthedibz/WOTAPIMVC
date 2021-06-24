@@ -3,6 +3,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using WOTAPI.Data;
 
 namespace WOTAPI.WebMVC.Models
 {
@@ -24,6 +25,7 @@ namespace WOTAPI.WebMVC.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Book> Books { get; set; }
 
         public static ApplicationDbContext Create()
         {
