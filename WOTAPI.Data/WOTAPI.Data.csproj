@@ -60,6 +60,10 @@
     <Compile Include="Migrations\202106241907594_BookDbSetAdded.Designer.cs">
       <DependentUpon>202106241907594_BookDbSetAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106241921159_ComputerTellsMeToMigrate.cs" />
+    <Compile Include="Migrations\202106241921159_ComputerTellsMeToMigrate.Designer.cs">
+      <DependentUpon>202106241921159_ComputerTellsMeToMigrate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202106241907594_BookDbSetAdded.resx">
       <DependentUpon>202106241907594_BookDbSetAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106241921159_ComputerTellsMeToMigrate.resx">
+      <DependentUpon>202106241921159_ComputerTellsMeToMigrate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
