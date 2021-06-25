@@ -5,6 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
+using WOTAPI.Data;
 using WOTAPI.WebMVC.Models;
 
 namespace WOTAPI.WebMVC

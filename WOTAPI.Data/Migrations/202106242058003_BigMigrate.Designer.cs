@@ -7,13 +7,13 @@ namespace WOTAPI.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class GUIDadded : IMigrationMetadata
+    public sealed partial class BigMigrate : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(GUIDadded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(BigMigrate));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106241957506_GUIDadded"; }
+            get { return "202106242058003_BigMigrate"; }
         }
         
         string IMigrationMetadata.Source

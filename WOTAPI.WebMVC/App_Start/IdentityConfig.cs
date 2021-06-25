@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using WOTAPI.Data;
 using WOTAPI.WebMVC.Models;
 
 namespace WOTAPI.WebMVC

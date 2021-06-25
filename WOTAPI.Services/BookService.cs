@@ -1,22 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WOTAPI.Data;
 using WOTAPI.Models.Book;
-using WOTAPI.WebMVC.Models;
 
 namespace WOTAPI.Services
 {
     public class BookService
     {
-        public bool CreateBook(BookCreate book)
+        private readonly Guid _userId;
+        public BookService(Guid userId)
+        {
+            _userId = userId;
+        }
+        public bool CreateBook(BookCreate model)
         {
             var entity = new Book()
             {
-                Title = book.Title,
-                PageCount = book.PageCount
+                OwnerId = _userId,
+                Title = model.Title,
+                PageCount = model.PageCount
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -25,12 +28,22 @@ namespace WOTAPI.Services
             }
         }
 
-        //public IEnumerable<BookListItem> GetBooks()
-        //{
-        //    using (var ctx = new ApplicationDbContext())
-        //    {
-        //        var query = ctx.Books.Where(e =>);
-        //    }
-        //}
+        public IEnumerable<BookListItem> GetBooks()
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query = ctx.Books.Where(e => e.OwnerId == _userId)
+                    .Select(
+                        e =>
+                        new BookListItem
+                        {
+                            BookId = e.BookId,
+                            Title = e.Title,
+                            PageCount = e.PageCount
+                        }
+                    );
+                return query.ToArray();
+            }
+        }
     }
 }

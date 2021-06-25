@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -14,8 +15,12 @@ namespace WOTAPI.WebMVC.Controllers
     {
         // GET: Book
         public ActionResult Index()
+        
         {
-            var model = new BookListItem[0];
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BookService(userId);
+            var model = service.GetBooks();
+
             return View(model);
         }
 
@@ -27,19 +32,20 @@ namespace WOTAPI.WebMVC.Controllers
         // Post: Book/Create
         [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(BookCreate book)
+        public ActionResult Create(BookCreate model)
         {
             if (!ModelState.IsValid)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             };
-            var service = new BookService();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BookService(userId);
 
-            if (service.CreateBook(book))
+            if (service.CreateBook(model))
             {
                 return RedirectToAction("Index");
             }
-            return View(book);
+            return View(model);
         }
     }
 }

@@ -56,17 +56,9 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202106241907594_BookDbSetAdded.cs" />
-    <Compile Include="Migrations\202106241907594_BookDbSetAdded.Designer.cs">
-      <DependentUpon>202106241907594_BookDbSetAdded.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106241921159_ComputerTellsMeToMigrate.cs" />
-    <Compile Include="Migrations\202106241921159_ComputerTellsMeToMigrate.Designer.cs">
-      <DependentUpon>202106241921159_ComputerTellsMeToMigrate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202106241957506_GUIDadded.cs" />
-    <Compile Include="Migrations\202106241957506_GUIDadded.Designer.cs">
-      <DependentUpon>202106241957506_GUIDadded.cs</DependentUpon>
+    <Compile Include="Migrations\202106242058003_BigMigrate.cs" />
+    <Compile Include="Migrations\202106242058003_BigMigrate.Designer.cs">
+      <DependentUpon>202106242058003_BigMigrate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,14 +68,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202106241907594_BookDbSetAdded.resx">
-      <DependentUpon>202106241907594_BookDbSetAdded.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106241921159_ComputerTellsMeToMigrate.resx">
-      <DependentUpon>202106241921159_ComputerTellsMeToMigrate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106241957506_GUIDadded.resx">
-      <DependentUpon>202106241957506_GUIDadded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106242058003_BigMigrate.resx">
+      <DependentUpon>202106242058003_BigMigrate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
