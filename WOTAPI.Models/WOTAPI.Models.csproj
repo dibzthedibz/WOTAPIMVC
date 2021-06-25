@@ -56,10 +56,10 @@
   <ItemGroup>
     <Compile Include="Book\BookCreate.cs" />
     <Compile Include="Book\BookListItem.cs" />
+    <Compile Include="Chapter\ChapterListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Chapter\" />
     <Folder Include="Character\" />
     <Folder Include="Nation\" />
   </ItemGroup>

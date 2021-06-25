@@ -55,10 +55,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
+    <Compile Include="Chapter.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202106242058003_BigMigrate.cs" />
     <Compile Include="Migrations\202106242058003_BigMigrate.Designer.cs">
       <DependentUpon>202106242058003_BigMigrate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106251248473_ChapterAddedToBothObjects.cs" />
+    <Compile Include="Migrations\202106251248473_ChapterAddedToBothObjects.Designer.cs">
+      <DependentUpon>202106251248473_ChapterAddedToBothObjects.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +75,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202106242058003_BigMigrate.resx">
       <DependentUpon>202106242058003_BigMigrate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106251248473_ChapterAddedToBothObjects.resx">
+      <DependentUpon>202106251248473_ChapterAddedToBothObjects.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

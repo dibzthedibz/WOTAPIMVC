@@ -17,5 +17,6 @@ namespace WOTAPI.Data
         public string Title { get; set; }
         [Required]
         public int PageCount { get; set; }
+        public List<Chapter> Chapters { get; set; } = new List<Chapter>();
     }
 }
