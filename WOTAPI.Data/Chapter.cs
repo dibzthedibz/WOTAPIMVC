@@ -12,14 +12,20 @@ namespace WOTAPI.Data
     {
         [Key]
         public int ChapterId { get; set; }
+        public Guid OwnerId { get; set; }
+
         [Required]
         public int ChapNum { get; set; }
+
         [Required]
         public string ChapTitle { get; set; }
+
         [Required]
         public int PageCount { get; set; }
-        [ForeignKey(nameof(Book))]
+        
+        [Required]
         public int? BookId { get; set; }
+        [ForeignKey(nameof(BookId))]
         public virtual Book Book { get; set; }
     }
 }

@@ -65,6 +65,18 @@
     <Compile Include="Migrations\202106251248473_ChapterAddedToBothObjects.Designer.cs">
       <DependentUpon>202106251248473_ChapterAddedToBothObjects.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106251313002_ForgotDbSetForChaptersInIdentityModels.cs" />
+    <Compile Include="Migrations\202106251313002_ForgotDbSetForChaptersInIdentityModels.Designer.cs">
+      <DependentUpon>202106251313002_ForgotDbSetForChaptersInIdentityModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106251315192_AddedGUIDToChapter.cs" />
+    <Compile Include="Migrations\202106251315192_AddedGUIDToChapter.Designer.cs">
+      <DependentUpon>202106251315192_AddedGUIDToChapter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106251444046_ChapterFKUpdatedToBeCorrect.cs" />
+    <Compile Include="Migrations\202106251444046_ChapterFKUpdatedToBeCorrect.Designer.cs">
+      <DependentUpon>202106251444046_ChapterFKUpdatedToBeCorrect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,6 +90,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106251248473_ChapterAddedToBothObjects.resx">
       <DependentUpon>202106251248473_ChapterAddedToBothObjects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106251313002_ForgotDbSetForChaptersInIdentityModels.resx">
+      <DependentUpon>202106251313002_ForgotDbSetForChaptersInIdentityModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106251315192_AddedGUIDToChapter.resx">
+      <DependentUpon>202106251315192_AddedGUIDToChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106251444046_ChapterFKUpdatedToBeCorrect.resx">
+      <DependentUpon>202106251444046_ChapterFKUpdatedToBeCorrect.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
