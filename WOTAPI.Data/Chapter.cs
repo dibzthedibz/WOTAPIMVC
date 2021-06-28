@@ -27,5 +27,8 @@ namespace WOTAPI.Data
         public int? BookId { get; set; }
         [ForeignKey(nameof(BookId))]
         public virtual Book Book { get; set; }
+        public int? CharacterId { get; set; }
+        [ForeignKey(nameof(CharacterId))]
+        public virtual Character Character { get; set; }
     }
 }

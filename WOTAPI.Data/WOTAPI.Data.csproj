@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Book.cs" />
     <Compile Include="Chapter.cs" />
+    <Compile Include="Character.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202106242058003_BigMigrate.cs" />
     <Compile Include="Migrations\202106242058003_BigMigrate.Designer.cs">
@@ -76,6 +77,10 @@
     <Compile Include="Migrations\202106251444046_ChapterFKUpdatedToBeCorrect.cs" />
     <Compile Include="Migrations\202106251444046_ChapterFKUpdatedToBeCorrect.Designer.cs">
       <DependentUpon>202106251444046_ChapterFKUpdatedToBeCorrect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106281423313_AddedCharacterAndFKToChapter.cs" />
+    <Compile Include="Migrations\202106281423313_AddedCharacterAndFKToChapter.Designer.cs">
+      <DependentUpon>202106281423313_AddedCharacterAndFKToChapter.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106251444046_ChapterFKUpdatedToBeCorrect.resx">
       <DependentUpon>202106251444046_ChapterFKUpdatedToBeCorrect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281423313_AddedCharacterAndFKToChapter.resx">
+      <DependentUpon>202106281423313_AddedCharacterAndFKToChapter.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
