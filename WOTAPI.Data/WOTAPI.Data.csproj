@@ -98,9 +98,17 @@
     <Compile Include="Migrations\202106281447301_ChangedFullName.Designer.cs">
       <DependentUpon>202106281447301_ChangedFullName.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.cs" />
-    <Compile Include="Migrations\202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.Designer.cs">
-      <DependentUpon>202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.cs</DependentUpon>
+    <Compile Include="Migrations\202106281657507_NationAdded.cs" />
+    <Compile Include="Migrations\202106281657507_NationAdded.Designer.cs">
+      <DependentUpon>202106281657507_NationAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106281703523_AddedGUIDAndAnnotationToNation.cs" />
+    <Compile Include="Migrations\202106281703523_AddedGUIDAndAnnotationToNation.Designer.cs">
+      <DependentUpon>202106281703523_AddedGUIDAndAnnotationToNation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106281725121_ChangedTradesToString.cs" />
+    <Compile Include="Migrations\202106281725121_ChangedTradesToString.Designer.cs">
+      <DependentUpon>202106281725121_ChangedTradesToString.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Nation.cs" />
@@ -141,8 +149,14 @@
     <EmbeddedResource Include="Migrations\202106281447301_ChangedFullName.resx">
       <DependentUpon>202106281447301_ChangedFullName.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.resx">
-      <DependentUpon>202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202106281657507_NationAdded.resx">
+      <DependentUpon>202106281657507_NationAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281703523_AddedGUIDAndAnnotationToNation.resx">
+      <DependentUpon>202106281703523_AddedGUIDAndAnnotationToNation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281725121_ChangedTradesToString.resx">
+      <DependentUpon>202106281725121_ChangedTradesToString.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

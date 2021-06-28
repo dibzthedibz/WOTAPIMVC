@@ -7,13 +7,13 @@ namespace WOTAPI.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class NationCreatedAndFKAddedToChapterAndCharacterObjects : IMigrationMetadata
+    public sealed partial class NationAdded : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(NationCreatedAndFKAddedToChapterAndCharacterObjects));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(NationAdded));
         
         string IMigrationMetadata.Id
         {
-            get { return "202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects"; }
+            get { return "202106281657507_NationAdded"; }
         }
         
         string IMigrationMetadata.Source

@@ -39,6 +39,8 @@ namespace WOTAPI.Data
         public DbSet<Chapter> Chapters { get; set; }
 
         public DbSet<Character> Characters { get; set; }
+        public DbSet<Nation> Nations { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

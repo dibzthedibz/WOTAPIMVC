@@ -62,11 +62,11 @@
     <Compile Include="Chapter\ChapterListItem.cs" />
     <Compile Include="Character\CharacterCreate.cs" />
     <Compile Include="Character\CharacterListItem.cs" />
+    <Compile Include="Nation\NationCreate.cs" />
+    <Compile Include="Nation\NationListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Nation\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

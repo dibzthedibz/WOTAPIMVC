@@ -5,57 +5,50 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using WOTAPI.Data;
-using WOTAPI.Models.Character;
+using WOTAPI.Models.Nation;
 using WOTAPI.Services;
 
 namespace WOTAPI.WebMVC.Controllers
 {
     [Authorize]
-    public class CharacterController : Controller
+    public class NationController : Controller
     {
-        // GET: Character
+        // GET: Nation
         public ActionResult Index()
         {
-            var service = CreateCharacterService();
-            var model = service.GetCharacters();
+            var service = CreateNationService();
+            var model = service.GetNations();
             return View(model);
         }
 
-        // Get: Character/Create
+        // Get: Nation/Create
         public ActionResult Create()
         {
-            var service = CreateCharacterService();
-            var chars = service.CreateCharacterList();
-            ViewBag.CharacterId = new SelectList(chars, "CharacterId", "FullName");
             return View();
         }
-
-        // Post: Character/Create
+        // Post: Nation/Create
         [HttpPost, ActionName("Create")]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CharacterCreate model)
+        public ActionResult Create(NationCreate model)
         {
             if (!ModelState.IsValid)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             };
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new CharacterService(userId);
+            var service = new NationService(userId);
 
-            if (service.CreateCharacter(model))
+            if (service.CreateNation(model))
             {
                 return RedirectToAction("Index");
             }
             return View(model);
         }
 
-        
-
-        public CharacterService CreateCharacterService()
+        public NationService CreateNationService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new CharacterService(userId);
+            var service = new NationService(userId);
             return service;
         }
     }
