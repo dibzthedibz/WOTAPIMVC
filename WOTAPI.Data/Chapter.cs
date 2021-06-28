@@ -30,5 +30,8 @@ namespace WOTAPI.Data
         public int? CharacterId { get; set; }
         [ForeignKey(nameof(CharacterId))]
         public virtual Character Character { get; set; }
+        public int? NationId { get; set; }
+        [ForeignKey(nameof(NationId))]
+        public virtual Character Nation { get; set; }
     }
 }

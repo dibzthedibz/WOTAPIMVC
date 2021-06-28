@@ -98,7 +98,12 @@
     <Compile Include="Migrations\202106281447301_ChangedFullName.Designer.cs">
       <DependentUpon>202106281447301_ChangedFullName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.cs" />
+    <Compile Include="Migrations\202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.Designer.cs">
+      <DependentUpon>202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Nation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106281447301_ChangedFullName.resx">
       <DependentUpon>202106281447301_ChangedFullName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.resx">
+      <DependentUpon>202106281556244_NationCreatedAndFKAddedToChapterAndCharacterObjects.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
