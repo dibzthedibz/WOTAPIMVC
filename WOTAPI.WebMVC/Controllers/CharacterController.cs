@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using WOTAPI.Data;
 using WOTAPI.Models.Character;
 using WOTAPI.Services;
 
@@ -23,6 +24,9 @@ namespace WOTAPI.WebMVC.Controllers
         // Get: Character/Create
         public ActionResult Create()
         {
+            var service = CreateCharacterService();
+            var chars = service.CreateCharacterList();
+            ViewBag.CharacterId = new SelectList(chars, "CharacterId", "FullName");
             return View();
         }
 
@@ -44,6 +48,8 @@ namespace WOTAPI.WebMVC.Controllers
             }
             return View(model);
         }
+
+        
 
         public CharacterService CreateCharacterService()
         {

@@ -25,7 +25,8 @@ namespace WOTAPI.Services
                 BookId = model.BookId,
                 ChapNum = model.ChapNum,
                 ChapTitle = model.ChapTitle,
-                PageCount = model.PageCount
+                PageCount = model.PageCount,
+                CharacterId = model.CharacterId
             };
             using (var ctx = new ApplicationDbContext())
             {
@@ -46,7 +47,7 @@ namespace WOTAPI.Services
                             ChapNum = e.ChapNum,
                             ChapTitle = e.ChapTitle,
                             PageCount = e.PageCount,
-                            BookId = e.BookId
+                            BookId = e.BookId,
                         }
                     );
                 return query.ToArray();
@@ -56,7 +57,7 @@ namespace WOTAPI.Services
         {
             var booklist = _db.Books.ToList();
             return booklist;
-            
+
         }
     }
 }

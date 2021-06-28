@@ -18,6 +18,5 @@ namespace WOTAPI.Models.Chapter
         [Required]
         public int PageCount { get; set; }
         public int? BookId { get; set; }
-
     }
 }

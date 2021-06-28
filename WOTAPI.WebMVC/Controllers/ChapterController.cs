@@ -27,6 +27,9 @@ namespace WOTAPI.WebMVC.Controllers
         {
             var service = CreateChapService();
             var books = service.CreateBookList();
+            var service1 = CreateCharacterService();
+            var chars = service1.CreateCharacterList();
+            ViewBag.CharacterId = new SelectList(chars, "CharacterId", "FirstName");
             ViewBag.BookId = new SelectList(books, "BookId", "Title");
             return View();
         }
@@ -51,6 +54,13 @@ namespace WOTAPI.WebMVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ChapterService(userId);
+            return service;
+        }
+
+        public CharacterService CreateCharacterService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new CharacterService(userId);
             return service;
         }
     }

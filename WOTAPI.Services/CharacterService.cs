@@ -53,5 +53,12 @@ namespace WOTAPI.Services
             }
 
         }
+
+        public List<Character> CreateCharacterList()
+        {
+            var charList = _db.Characters.ToList();
+            return charList;
+
+        }
     }
 }

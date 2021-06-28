@@ -9,17 +9,8 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<hr />
-
-
 <table class="table">
     <tr>
-        @*<th>
-                @Html.DisplayNameFor(model => model.ChapterId)
-            </th>*@
-        <th>
-            @Html.DisplayNameFor(model => model.BookId)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.ChapNum)
         </th>
@@ -29,19 +20,12 @@
         <th>
             @Html.DisplayNameFor(model => model.PageCount)
         </th>
-
         <th></th>
     </tr>
 
     @foreach (var item in Model)
     {
         <tr>
-            @*<td>
-                    @Html.DisplayFor(modelItem => item.ChapterId)
-                </td>*@
-            <td>
-                @Html.DisplayFor(modelItem => item.BookId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ChapNum)
             </td>
