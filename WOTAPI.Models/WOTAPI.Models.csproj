@@ -55,8 +55,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book\BookCreate.cs" />
+    <Compile Include="Book\BookDetail.cs" />
     <Compile Include="Book\BookListItem.cs" />
     <Compile Include="Chapter\ChapterCreate.cs" />
+    <Compile Include="Chapter\ChapterDetail.cs" />
     <Compile Include="Chapter\ChapterListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

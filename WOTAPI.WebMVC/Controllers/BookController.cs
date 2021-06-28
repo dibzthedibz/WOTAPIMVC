@@ -15,10 +15,10 @@ namespace WOTAPI.WebMVC.Controllers
     {
         // GET: Book
         public ActionResult Index()
-        
+
         {
-            var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new BookService(userId);
+
+            var service = CreateBookService();
             var model = service.GetBooks();
 
             return View(model);
@@ -46,6 +46,24 @@ namespace WOTAPI.WebMVC.Controllers
                 return RedirectToAction("Index");
             }
             return View(model);
+        }
+        //Get: Book/Details
+        public ActionResult Details(int id)
+        {
+
+            var service = CreateBookService();
+            var cList = service.CreateChapterList(id);
+            ViewBag.ChapterId = new SelectList(cList, "ChapterId", "ChapTitle");
+            var model = service.GetBookDetail(id);
+            return View(model);
+
+        }
+
+        public BookService CreateBookService()
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new BookService(userId);
+            return service;
         }
     }
 }

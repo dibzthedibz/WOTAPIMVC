@@ -1,4 +1,7 @@
-﻿namespace WOTAPI.Models.Book
+﻿using System.Collections.Generic;
+using WOTAPI.Models.Chapter;
+
+namespace WOTAPI.Models.Book
 {
     public class BookListItem
     {
