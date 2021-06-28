@@ -31,6 +31,7 @@ namespace WOTAPI.Services
             }
         }
 
+
         public IEnumerable<BookListItem> GetBooks()
         {
             using (var ctx = new ApplicationDbContext())

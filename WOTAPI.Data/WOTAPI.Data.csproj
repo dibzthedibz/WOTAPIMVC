@@ -82,6 +82,22 @@
     <Compile Include="Migrations\202106281423313_AddedCharacterAndFKToChapter.Designer.cs">
       <DependentUpon>202106281423313_AddedCharacterAndFKToChapter.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202106281424409_CharacterListAddedToBook.cs" />
+    <Compile Include="Migrations\202106281424409_CharacterListAddedToBook.Designer.cs">
+      <DependentUpon>202106281424409_CharacterListAddedToBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106281428578_DbSetAddedToIdentityModels.cs" />
+    <Compile Include="Migrations\202106281428578_DbSetAddedToIdentityModels.Designer.cs">
+      <DependentUpon>202106281428578_DbSetAddedToIdentityModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106281430551_AddedGUIDToCharacter.cs" />
+    <Compile Include="Migrations\202106281430551_AddedGUIDToCharacter.Designer.cs">
+      <DependentUpon>202106281430551_AddedGUIDToCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106281447301_ChangedFullName.cs" />
+    <Compile Include="Migrations\202106281447301_ChangedFullName.Designer.cs">
+      <DependentUpon>202106281447301_ChangedFullName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -107,6 +123,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202106281423313_AddedCharacterAndFKToChapter.resx">
       <DependentUpon>202106281423313_AddedCharacterAndFKToChapter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281424409_CharacterListAddedToBook.resx">
+      <DependentUpon>202106281424409_CharacterListAddedToBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281428578_DbSetAddedToIdentityModels.resx">
+      <DependentUpon>202106281428578_DbSetAddedToIdentityModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281430551_AddedGUIDToCharacter.resx">
+      <DependentUpon>202106281430551_AddedGUIDToCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106281447301_ChangedFullName.resx">
+      <DependentUpon>202106281447301_ChangedFullName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

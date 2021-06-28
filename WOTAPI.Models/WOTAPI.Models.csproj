@@ -60,10 +60,11 @@
     <Compile Include="Chapter\ChapterCreate.cs" />
     <Compile Include="Chapter\ChapterDetail.cs" />
     <Compile Include="Chapter\ChapterListItem.cs" />
+    <Compile Include="Character\CharacterCreate.cs" />
+    <Compile Include="Character\CharacterListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Character\" />
     <Folder Include="Nation\" />
   </ItemGroup>
   <ItemGroup>
